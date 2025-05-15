@@ -1,0 +1,36 @@
+These are misspellings from the words starting with first three letters (484 lines) of the raw output from Gemini according to spellcheck.mn:
+
+асгархай
+атах
+бак
+банка
+банкууд
+бариан
+бёгнөх
+бэе
+бэлдцэл
+бизнесмэн
+билеэт
+бойкот
+болзвор
+бомбог
+боодох
+бөлөг
+бөгжрөх
+буйлуур
+бүлхэх
+бүрээлэх
+вакуум
+винт
+водка
+волейвол 
+
+
+Native speaker response: 
+
+банкууд. Банк is Russian work уул is Mongolian suffix 
+бизнесмэн is Russian but we always use it
+вакуум is Russian we use it 
+водка is Russian we use 
+волейвол is also Russian we also use
+I do not recognize others as a Mongolian and Russian...un known
