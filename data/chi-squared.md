@@ -8,25 +8,25 @@ Alternate hypothesis: There is a significant difference.
 expected = row total * column total / grand total
 
             Errors  Correct     Total
-Direct      39.3    960.7       1000
-Articles    39.3    960.7       1000
-Translate   39.3    960.7       1000
+Direct      40      960         1000
+Articles    40      960         1000
+Translate   40      960         1000
 
 ## Actual values
 
             Errors  Correct     Total
 Direct      35      965         1000
 Articles    8       992         1000
-Translate   75      925         1000
-Total       118     2882        3000
+Translate   77      923         1000
+Total       120     2880        3000
 
 ## Chi-square
 
 X^2 = Sum( (observed - expected)^2 / expected )
 
-X^2 = (35-39.3)^2/39.3 + (8-39.3)^2/39.3 + (75-39.3)^2/39.3 + (965-960.7)^2/960.7 + (992-960.7)^2/960.7 + (925-960.7)^2/960.7
-    = 0.47 + 24.93 + 32.43 + 0.02 + 1.02 + 1.33
-    = 60.20
+X^2 = (35-40)^2/40 + (8-40)^2/40 + (77-40)^2/40 + (965-960)^2/960 + (992-960)^2/960 + (923-960)^2/960
+    = 0.625 + 25.6 + 34.225 + 0.026 + 1.067 + 1.426
+    = 62.969 
 
 ## Degrees of freedom
 
@@ -36,9 +36,8 @@ df = (rows - 1)(columns - 1)
 
 ## p value
 
-=CHISQ.DIST.RT(60.20, 2)
-0.00000000000008467127
-
+=CHISQ.DIST.RT(63, 2)
+0.00000000000002087968
 p < 0.0001
 
 
@@ -87,23 +86,23 @@ p < 0.0001
 expected = row total * column total / grand total
 
             Errors  Correct     Total
-Direct      41.5    958.5       1000
-Articles    41.5    958.5       1000
+Direct      42.5    957.5       1000
+Articles    42.5    957.5       1000
 
 ### Actual values
 
             Errors  Correct     Total
 Articles    8       992         1000
-Translate   75      925         1000
-Total       83      1917        2000
+Translate   77      923         1000
+Total       85      1915        2000
 
 ## Chi-square
 
 X^2 = Sum( (observed - expected)^2 / expected )
 
-X^2 = (75-41.5)^2/41.5 + (8-41.5)^2/41.5 + (925-958.5)^2/958.5 + (992-958.5)^2/958.5
-    = 27.04 + 27.04 + 1.17 + 1.17
-    = 56.42
+X^2 = (77-42.5)^2/42.5 + (8-42.5)^2/42.5 + (923-957.5)^2/957.5 + (992-957.5)^2/957.5
+    = 28.01 + 28.01 + 1.24 + 1.24
+    = 58.5
 
 ## Degrees of freedom
 
@@ -113,7 +112,6 @@ df = (rows - 1)(columns - 1)
 
 ## p value
 
-=CHISQ.DIST.RT(56.42, 1)
-0.00000000000005853198
-
+=CHISQ.DIST.RT(58.5, 1)
+0.00000000000002032909
 p < 0.0001
