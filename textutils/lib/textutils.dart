@@ -2,22 +2,23 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  // final words = _parseMongolianRawText();
-  // final words = _parseFullWordsNoHyphensMongolian(geminiMongolian);
-  // final words = _parseFullWordsNoHyphensEnglish(geminiInputEnglish);
+  // final words = _parseMongolianDirect();
   // final words = _parseMongolianArticles();
   final words = _parseMongolianTranslations();
   // print(words);
   print(words.length);
-  _print100RandomWords(words);
   final outputFile = File('output.txt');
   outputFile.writeAsStringSync(words.join('\n'));
+
+  final randomWords = _randomWords(words, 1000);
+  final randomOutputFile = File('random.txt');
+  randomOutputFile.writeAsStringSync(randomWords.join('\n'));
 }
 
-void _print100RandomWords(List<String> words) {
+List<String> _randomWords(List<String> words, int number) {
   final random = Random();
   final shuffledWords = words.toList()..shuffle(random);
-  print(shuffledWords.take(100).join(', '));
+  return shuffledWords.take(number).toList();
 }
 
 List<String> _parseFullWordsNoHyphensEnglish(String input) {
@@ -40,6 +41,12 @@ List<String> _parseFullWordsNoHyphensMongolian(String input) {
       .toSet()
       .toList()
     ..sort();
+}
+
+List<String> _parseMongolianDirect() {
+  final file = File('../data/direct/mn/gemini_cleaned_output.txt');
+  final input = file.readAsStringSync();
+  return _parseFullWordsNoHyphensMongolian(input);
 }
 
 List<String> _parseMongolianArticles() {
